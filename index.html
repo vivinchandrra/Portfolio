@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vivin Chandrra Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">VIVIN CHANDRRA PAASAM</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#POR-section" class="nav-link"><span>POR</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/mnpc.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Vivin Chandrra</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Engineer  ',
+						'Innovator  ',
+						'Problem Solver  ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>An Aspiring Machine Learning Engineer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p>
+							<a href="https://github.com/vivinchandrra" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="vivin.jpeg" style="border-radius: 50%;" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>VIVIN CHANDRRA PAASAM</span></p>										
+										<p><span class="title-s">College: </span> <span>Vardhaman College of Engineering</span></p>
+										<p><span class="title-s">Year of Passing: </span> <span>2026</span></p>
+										<p><span class="title-s">Address: </span> <span>Hyderabad, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>C & C++</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>HTML & CSS</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Python</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+<!-- 									
+									<span>JAVA</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div> -->
+
+									<!-- <span>Data Structures</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div> -->
+
+									<span>DSA AND OOP</span> <span class="pull-right">88%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">55%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I'm B.Tech undergraduate, seeking an internship to gain practical experience and contribute to innovative projects.
+									Passionate about leveraging technology to solve real-world problems and contribute meaningfully to dynamic and
+									growth-oriented projects</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Domain:</span> <span>Artificial Intelligence & Data Science</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Telugu, Hindi</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span> Canva Designing, Event Management</span></li>
+									<li class="d-flex"><span>Interests:</span> <span> Travelling</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="5">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/vivin-chandrra-paasam/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Highly motivated 3rd year AIDS student with strong programming skills, Data Structures and Algorithm skills,
+				eager to contribute to innovative projects and learn from industry leads through an internship opportunity.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Internships</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date"> July 2024-Dec 2024</span>
+						<h2>IEEE Hyderabad Section</h2>
+						<span class="position">Intern</span>
+						<p class="mt-4"> 
+							<ul>
+								Gaining hands-on experience in social entrepreneurship while leveraging my skills in entrepreneurship and responsible business practices.  </ul>
+						</p>
+					</div>
+
+				</div>
+
+				
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Present</span>
+						<h2>Bala Vikasa CSRB (Centre for Social and Responsible Business)</h2>
+						<span class="position">Intern</span>
+						<p class="mt-4"> 
+							<ul>
+								Gaining hands-on experience in social entrepreneurship while leveraging my skills in entrepreneurship and responsible business practices.  </ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2026</span>
+    					<h2>Bachelor of Technology</h2>
+    					<span class="position">Vardhaman College of Engineering</span>
+    					<!-- <p class="mt-4">CGPA: 9.00</p> -->
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2022</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">Narayana Junior College (TSBIE)</span>
+    					<!-- <p class="mt-4">Grade: 85%.</p> -->
+						
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1RlOw2frsPu6Ir6q8F9KXSE_sUbR3-C7Q/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+	<section class="ftco-section ftco-no-pb" id="project-section">
+	<div class="row">
+		<h1 class="big-4">Projects</h1>
+		<div class="underline"></div>
+	</div>
+	<br>
+	
+	<div class="row">
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Plantobo</span>
+					<!-- <h2>Plantobo</h2> -->
+					<!-- <span class="position">Plantobo</span> -->
+					<p class="mt-4"> 
+						<ul>
+							Plantobo is a cutting-edge project that combines robotics, AI, and IoT to enable intelligent automation. It focuses on enhancing real-time decision-making and efficiency in various applications. The project aims to create smart, adaptive systems for improved performance and innovation.                                                                                                
+
+						</ul>
+					</p>
+				</div>
+
+			</div>
+
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Hotel Management System application</span>
+					<h2>Using Java</h2>
+					<!-- <span class="position">Intern</span> -->
+					<p class="mt-4"> 
+						<ul>
+							A Hotel Management System application using Java helps automate hotel operations like room booking, check-ins, check-outs, and billing. It includes features such as user management, real-time availability tracking, and automated invoicing. The system enhances efficiency, reduces manual work, and improves the guest experience.</ul>
+					</p>
+				</div>
+
+			</div>
+
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Hospital Management System</span>
+					<h2>Using Python and GUI</h2>
+					<!-- <span class="position">Intern</span> -->
+					<p class="mt-4"> 
+						<ul>
+							A Hospital Management System using Python with a GUI helps streamline hospital operations like patient registration, doctor appointments, billing, and medical records management. It features an intuitive graphical user interface (GUI) using Tkinter, PyQt, or Kivy for easy navigation. The system enhances efficiency, reduces paperwork, and improves patient care.</ul>
+					</p>
+				</div>
+
+			</div>
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Personalized Health Recommendation System</span>
+					<h2>Using Machine Learning</h2>
+					<!-- <span class="position">Intern</span> -->
+					<p class="mt-4"> 
+						<ul>
+							A Personalized Health Recommendation System using Machine Learning analyzes user data like medical history, lifestyle, and vitals to provide tailored health suggestions. It leverages algorithms like decision trees, neural networks, and recommendation systems to offer diet, exercise, and medication advice. The system enhances preventive care and promotes healthier lifestyles.</ul>
+					</p>
+				</div>
+
+			</div>
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Smart Farming using Edge Networks </span>
+					<h2>Using Machine Learning</h2>
+					<!-- <span class="position">Intern</span> -->
+					<p class="mt-4"> 
+						<ul>Smart Farming using Edge Networks is an advanced agricultural solution that leverages edge computing for real-time monitoring and decision-making. It integrates IoT sensors, AI, and distributed networks to optimize crop management, resource utilization, and predictive analytics. This system enhances efficiency, reduces latency, and improves sustainable farming practices.
+						</ul>
+						</p>
+				</div>
+
+			</div>
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Image Captioning using Deep Learning </span>
+					<!-- <h2>Using Machine Learning</h2> -->
+					<!-- <span class="position">Intern</span> -->
+					<p class="mt-4"> 
+						<ul>Image Captioning using Deep Learning is a technique that combines computer vision and natural language processing to generate descriptive captions for images. It uses convolutional neural networks (CNNs) to extract visual features and recurrent neural networks (RNNs) or transformers to generate meaningful text. This technology is widely used in accessibility tools, content automation, and image-based search applications.</ul>
+						</p>
+				</div>
+
+			</div>
+		</div>
+
+	<br>
+	<br>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="12">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="6">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="300">0</strong>
+                <span>Solved problem at online coding platforms</span>
+              </div>
+            </div>
+          </div> -->
+          
+            
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> </h4>
+						<br>
+						<p><a href="https://github.com/vivinchandrra" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+	<section class="ftco-section ftco-no-pb" id="POR-section">
+		<div class="row">
+			<h1 class="big-4">Position of Responsibility</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">IIC-Student Innovation Coordinator</span>
+    					<h2>Center for Innovation and Entrepreneurship</h2>
+    					<span class="position">Vardhaman College of Engineering</span>
+    					<!-- <p class="mt-4">CGPA: 9.00</p> -->
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Treasurer</span>
+    					<h2>IEEE Society on Sensors Council</h2>
+    					<span class="position">Vardhaman Student Branch</span>
+    					<!-- <p class="mt-4">Grade: 85%.</p> -->
+						
+    				</div>
+				</div>
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Student Organizer and Member</span>
+    					<h2>Center for Innovation and Entrepreneurship</h2>
+    					<span class="position">Vardhaman College of Engineering</span>
+    					<!-- <p class="mt-4">Grade: 85%.</p> -->
+						
+    				</div>
+				</div>
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Student Network Member</span>
+    					<h2>IEEE Hyderabad Section Student Network Member</h2>
+    					<span class="position">IEEE Hyderabad Section</span>
+    					<!-- <p class="mt-4">Grade: 85%.</p> -->
+						
+    				</div>
+				</div>
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">Associate Manager</span>
+    					<h2>TEDxVCE</h2>
+    					<span class="position">Vardhaman College of Engineering</span>
+    					<!-- <p class="mt-4">Grade: 85%.</p> -->
+						
+    				</div>
+				</div>
+    		</div>
+
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Hyderabad, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 91821 83950</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">vivinchandrra1360@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1t5RQtIKbDIpDbn_OFw-6yNmdL6u4yXCi/view?usp=sharing">Click Here</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<!-- <div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2> Contact through Mail or Phone Number </h2>
+				</div>
+			</div> -->
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>					  
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/vivin-chandrra-paasam/"><span class="icon-linkedin"></span></a></li>  
+					  <!-- <li class="ftco-animate"><a href="https://x.com/srichaitanya___"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/tsrichaitanya"><span class="icon-facebook"></span></a></li> -->
+				      <li class="ftco-animate"><a href="https://www.instagram.com/vivinchandrra___?igsh=MW1iMm1hN2czM2c2Yg=="><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
+`
